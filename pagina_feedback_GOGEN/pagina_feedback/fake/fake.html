@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envio de Feedback</title>
+  <link rel="stylesheet" href="fake.css">
+</head>
+<body>
+  <header style="background-color: #004080; color: white; padding: 20px; text-align: center;">
+    <div class="logo">
+      <img src="https://findes.com.br/wp-content/uploads/2024/08/logo_findes_branco.png" alt="Logo da FINDES" style="height: 50px;">
+    </div>
+    <h1>Envio de Feedback</h1>
+  </header>
+
+  <!-- Área para Envio de Novos Feedbacks -->
+  <section id="envio-feedback">
+    <form action="/submit-feedback" method="POST" enctype="multipart/form-data">
+      <label for="nome">Nome do Solicitante:</label>
+      <input type="text" id="nome" name="nome" required><br>
+
+      <label for="email">Email do Solicitante:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="titulo">Título da Solicitação:</label>
+      <input type="text" id="titulo" name="titulo" required><br>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br>
+
+      <label for="anexos">Anexos:</label>
+      <input type="file" id="anexos" name="anexos[]" multiple><br>
+
+      <button type="submit">Enviar Feedback</button>
+    </form>
+  </section>
+
+  <footer>
+    <div>
+      <img src="https://findes.com.br/wp-content/uploads/2022/04/logo_findes.png" alt="Logo da FINDES" style="height: 50px;">
+      <p>Telefone: (27) 3334-5600</p>
+      <p>E-mail: <a href="mailto:atendimento@findes.org.br">atendimento@findes.org.br</a></p>
+    </div>
+    <hr>
+    <div>
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+    </div>
+    <hr>
+    <p>&copy; FINDES. Por você | Pela Indústria | Pelo ES</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
