@@ -1,0 +1,265 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #023E8A;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    color: #FF6D00;
+}
+
+main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #0077B6;
+    margin-bottom: 30px;
+}
+
+.support-card {
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.support-card:hover {
+    transform: translateY(-10px);
+}
+
+.support-card h2 {
+    color: #023E8A;
+    margin-bottom: 15px;
+}
+
+.support-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.support-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF6D00;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.support-card a:hover {
+    background-color: #FF9E00;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #0077B6;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+    color: #FF9E00;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Botão de Filtro */
+.filtro-container {
+    text-align: right; /* Alinha o botão à direita */
+    margin-bottom: 0.5px; /* Espaçamento abaixo do botão */
+    margin: 20px;
+}
+
+.filtro-button {
+    text-align: right;
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.filtro-button:hover {
+    background-color: #00509E;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button {
+    position: absolute;
+    right: 20px; /* Distância da borda direita */
+    top: 20px; /* Distância da parte superior */
+    background-color: #124B84;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Estilos para a tabela (planilha) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #003366;
+    color: white;
+}
+
+td {
+    background-color: #cfcfcf;
+}
+
+/* Estilos para o status */
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.status.aberto {
+    background-color: #81b231;
+    color: #000;
+}
+
+.status.fechado {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+
+/* Botões */
+
+.menu.button {
+background-color: #000;
+}
+
+button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #00509E;
+}
+
+/* Estilos do formulário */
+#formulario-feedback {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#formulario-feedback input[type="file"] {
+    margin: 10px 0;
+}
+
+/* Botão de Voltar */
+.botao-voltar {
+    margin: 20px;
+    text-align: left;
+}
+
+.botao-voltar button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botao-voltar button:hover {
+    background-color: #00509E;
+    transition: background-color 0.3s ease;
+}

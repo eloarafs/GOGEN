@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recebimento de Feedbacks - FINDES</title>
+    <link rel="stylesheet" href="feedback.css">
+    <!-- biblioteca Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="https://findes.com.br/wp-content/uploads/2024/08/logo_findes_branco.png" alt="Logo da FINDES">
+            <!-- botão menu -->
+            <button class="menu-button">Menu
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    <h2><center>Feedbacks Recebidos</center></h2>
+</header>
+    </header>
+
+        <!-- botão voltar -->
+        <div class="botao-voltar">
+            <button>Voltar</button>
+        </div>
+
+        <div class="filtro-container">
+            <button class="filtro-button">
+                <i class="fas fa-filter"></i> Filtro
+            </button>
+        </div>
+
+
+    <!-- tabela de feedbacks -->
+    <section id="feedbacks-recebidos">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID do Feedback</th>
+                    <th>Título da Solicitação</th>
+                    <th>Nome do Solicitante</th>
+                    <th>Data do Feedback</th>
+                    <th>Status do Feedback</th>
+                    <th>Comentários</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><center>001</center></td>
+                    <td>Problema na entrega</td>
+                    <td>Thomas Monteiro</td>
+                    <td><center>05/12/2024</center></td>
+                    <td><center><span class="status aberto">Aberto</span></center></td>
+                    <td>Entrega com material faltando.</td>
+                    <td><center>
+                        <button><a href="#detalhes">Ver Detalhes</a></button>
+                        <button><a href="#responder">Responder ao Feedback</a></button>
+                        <button><a href="#resolver">Marcar como Resolvido</a></button>
+                    </center></td>
+                </tr>
+
+                <tr>
+                    <td><center>002</center></td>
+                    <td>Problema na entrega</td>
+                    <td>João Vitor da Silva</td>
+                    <td><center>20/11/2024</center></td>
+                    <td><center><span class="status fechado">Fechado</span></center></td>
+                    <td>Entrega não realizada dentro do prazo.</td>
+                    <td><center>
+                        <button><a href="#detalhes">Ver Detalhes</a></button>
+                        <button><a href="#responder">Responder ao Feedback</a></button>
+                        <button><a href="#resolver">Marcar como Resolvido</a></button>
+                    </center></td>
+                </tr>
+
+                <tr>
+                    <td><center>003</center></td>
+                    <td>Atraso devido a chuva</td>
+                    <td>Matias dos Santos</td>
+                    <td><center>03/11/2024</center></td>
+                    <td><center><span class="status fechado">Fechado</span></center></td>
+                    <td>As chuvas constantes atrasaram o andamento do projeto.</td>
+                    <td><center>
+                        <button><a href="#detalhes">Ver Detalhes</a></button>
+                        <button><a href="#responder">Responder ao Feedback</a></button>
+                        <button><a href="#resolver">Marcar como Resolvido</a></button>
+                    </center></td>
+                </tr>
+                
+                
+                <!-- se precisar adicionar mais linhas só copiar o <tr> e o </tr> -->
+            </tbody>
+        </table>
+    </section>
+    
+    <hr>
+
+
+
+
+    <footer>
+
+        <h1>Entre em Contato com o Suporte</h1>
+
+        <div class="support-card">
+            <h2>WhatsApp</h2>
+            <p>Fale diretamente com nosso time de suporte pelo WhatsApp. Estamos disponíveis para ajudá-lo!</p>
+            <a href="https://wa.me/5588999999999" target="_blank">Enviar Mensagem</a>
+        </div>
+    
+            <!-- Cartão de Telefone -->
+        <div class="support-card">
+            <h2>Telefone</h2>
+            <p>Preferem ligar? Nosso suporte telefônico está disponível durante o horário comercial.</p>
+            <p><strong>+55 (27) 3333-4444</strong></p>
+        </div>
+    
+            <!-- Cartão de E-mail -->
+        <div class="support-card">
+            <h2>E-mail</h2>
+            <p>Envie um e-mail para nossa equipe de suporte e resolveremos sua questão o mais rápido possível.</p>
+            <a href="mailto:support@findes.org.br">Enviar E-mail</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
