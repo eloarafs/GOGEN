@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedbacks - FINDES</title>
+    <link rel="stylesheet" href="Solicitacoes.css"> <!-- Atualizado para usar o CSS unificado -->
+    <!-- Referência ao Bootstrap para usar os estilos dos botões -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">FINDES</div>
+        <nav class="icons">
+            <a href="HomeSolicitacao.html">Home</a>
+            <a href="Solicitacoes.html">solicitações</a>
+        </nav>
+        <spa href="admin.html">Notificação</a>
+        <a href="suporte.html">Configuração</a>
+    </header>
+    <main class="content">
+        <h1 class="title">Solicitações Recebidas</h1>
+        <div class="background-box"></div>
+        <div class="form-container">
+            <table id="feedbackTable" class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Solicitante</th>
+                        <th>Data</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="row-1">
+                        <td>1</td>
+                        <td>Reforma Sala de aula</td>
+                        <td>João Silva</td>
+                        <td>05/12/2024</td>
+                        <td id="status-1">Aberto</td>
+                        <td>
+                            <!-- Botões antigos, mas com as classes do Bootstrap -->
+                            <button type="button" class="btn btn-outline-primary" onclick="responderFeedback(1)">Responder</button>
+                            <button type="button" class="btn btn-outline-success" onclick="marcarResolvido(1)">Resolvido</button>
+                            <button type="button" class="btn btn-outline-danger" onclick="excluirFeedback(1)">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr id="row-2">
+                        <td>2</td>
+                        <td>Construção Cozinha Eventos</td>
+                        <td>Ana Costa</td>
+                        <td>06/12/2024</td>
+                        <td id="status-2">Aberto</td>
+                        <td>
+                            <!-- Botões antigos, mas com as classes do Bootstrap -->
+                            <button type="button" class="btn btn-outline-primary" onclick="responderFeedback(2)">Responder</button>
+                            <button type="button" class="btn btn-outline-success" onclick="marcarResolvido(2)">Resolvido</button>
+                            <button type="button" class="btn btn-outline-danger" onclick="excluirFeedback(2)">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="message" class="message"></div>
+            <a href="HomeSolicitacao.html" class="back-link">Voltar para Início</a>
+        </div>
+    </main>
+    <script>
+        function responderFeedback(id) {
+            const feedbackTitle = document.querySelector(`#row-${id} td:nth-child(2)`).textContent;
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = `Você respondeu ao feedback: "${feedbackTitle}".`;
+            messageElement.style.color = 'blue';
+        }
+
+        function marcarResolvido(id) {
+            const statusElement = document.getElementById(`status-${id}`);
+            statusElement.textContent = "Resolvido";
+            statusElement.style.backgroundColor = '#4CAF50';
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = `Feedback ID ${id} foi marcado como resolvido.`;
+            messageElement.style.color = 'green';
+        }
+
+        function excluirFeedback(id) {
+            if (confirm("Tem certeza de que deseja excluir este feedback?")) {
+                const row = document.getElementById(`row-${id}`);
+                row.remove();
+                const messageElement = document.getElementById('message');
+                messageElement.textContent = `Feedback ID ${id} foi excluído.`;
+                messageElement.style.color = 'red';
+            }
+        }
+    </script>
+    <!-- Referência ao JS do Bootstrap para garantir que os componentes funcionem corretamente -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

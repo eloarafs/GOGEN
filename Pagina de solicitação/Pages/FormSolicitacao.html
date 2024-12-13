@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitação de Serviço</title>
+  <link rel="stylesheet" href="FormSolicitacao.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">FINDES</div>
+
+    <nav class="icons">
+      <a href="p:/TURMAS/AIT-DDS-6/Grupo 2 projeto Findes/Pagina de solicitação/HomeSolicitacao.html">
+        <span>Home</span>
+      </a>
+      <span onclick="window.location.href='Solicitacoes.html'">solicitações</span>
+      <span id="notification-btn" style="cursor: pointer;">Notificação</span>
+      <span>Configuração</span>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1 class="title">Solicitação de Serviço</h1>
+
+    <div class="background-box"></div>
+
+    <div class="form-container">
+      <form id="solicitacao-form">
+
+        <div class="form-row">
+          <div class="form-col">
+            <input type="text" placeholder="Nome do solicitante" required />
+          </div>
+          <div class="form-col">
+            <input type="text" placeholder="CPF" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-col">
+            <input type="text" placeholder="Endereço do serviço" required />
+          </div>
+          <div class="form-col">
+            <input type="text" placeholder="Código do solicitante" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-col">
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div class="form-col">
+            <input type="text" placeholder="Empresa solicitante" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-col">
+            <input type="text" placeholder="Tipo de serviço" required />
+          </div>
+          <div class="form-col">
+            <input type="text" placeholder="Urgência" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-col">
+            <textarea placeholder="Descrição do serviço" required></textarea>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-col">
+            <label for="files">Enviar Imagens ou Arquivos:</label>
+            <input type="file" id="files" name="files" accept="image/*, application/pdf, .docx, .xlsx" multiple />
+          </div>
+        </div>
+
+        <button type="button" class="cta-button" onclick="redirectToPage()">
+          Criar Solicitação
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <div id="notification" class="notification">
+    Você tem uma nova notificação!
+ 
+    <i id="close-notification" class="fas fa-times" style="cursor: pointer;"></i>
+  </div>
+
+  <script>
+
+    document.getElementById('notification-btn').addEventListener('click', function() {
+      var notification = document.getElementById('notification');
+
+      notification.style.display = 'block';
+
+      setTimeout(function() {
+        notification.style.display = 'none';
+      }, 5000);
+    });
+
+    document.getElementById('close-notification').addEventListener('click', function() {
+      document.getElementById('notification').style.display = 'none';
+    });
+
+
+    function redirectToPage() {
+      window.location.href = 'FinalSolicitacao.html';
+    }
+  </script>
+
+</body>
+
+</html>

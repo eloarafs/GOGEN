@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitação Concluída</title>
+  <link rel="stylesheet" href="FinalSolicitacao.css"> 
+  <script>
+    function redirecionar() {
+      window.location.href = "HomeSolicitacao.html"; 
+    }
+
+    function showNotification() {
+      var notification = document.querySelector('.notification');
+      notification.style.display = 'block'; 
+      setTimeout(function() {
+        notification.style.display = 'none';
+      }, 3000);
+    }
+
+    function toggleNotification() {
+      var notification = document.querySelector('.notification');
+      if (notification.style.display === 'block') {
+        notification.style.display = 'none';
+      } else {
+        notification.style.display = 'block';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="header-logo">
+      <span>FINDES</span>
+    </div>
+    <div class="header-icons">
+      <a href="HomeSolicitacao.html"><span>Home</span></a>
+      <span onclick="window.location.href='Solicitacoes.html'">solicitações</span>
+      <span onclick="toggleNotification()">Notificação</span>
+      <span>Configuração</span>
+    </div>
+  </div>
+  <div class="content">
+    <div class="message-box">
+      <div class="message-content">
+        <img src="https://img.icons8.com/emoji/96/000000/check-mark-emoji.png" alt="Check Icon" class="check-icon">
+        <h1>Solicitação concluída</h1>
+        <p>Aguarde o retorno em até <strong>5-10 dias úteis</strong></p>
+      </div>
+    </div>
+    <button class="complete-button" onclick="redirecionar()">Concluído</button>
+  </div>
+  <div class="notification" style="display:none;">
+    Solicitação concluída com sucesso! 
+    <i onclick="this.parentElement.style.display='none'">×</i>
+  </div>
+</body>
+</html>
