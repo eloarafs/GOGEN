@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +16,6 @@ body {
   background-color: #ff0000;
 }
 
-/* Barra lateral fixa */
 .sidebar {
   position: fixed;
   top: 70px;
@@ -62,7 +60,6 @@ body {
   color: #ffffff;
 }
 
-/* Barra superior fixa */
 header {
   position: fixed;
   top: 0;
@@ -86,7 +83,6 @@ header .user-info {
   cursor: pointer;
 }
 
-/* Conteúdo principal */
 .main-content {
   margin-left: 100px;
   margin-top: 120px;
@@ -98,7 +94,6 @@ header .user-info {
   padding-left: 35%;
 }
 
-/* Boas-vindas */
 .welcome-section {
   margin-top: 80px;
   max-width: 400px;
