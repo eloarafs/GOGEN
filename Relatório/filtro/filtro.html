@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Projetos</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="filtro.css">
+</head>
+<header>
+    <div class="header">
+        <img src="../imagens/logo.png" alt="logo">
+        <h1>Filtro</h1>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <form id="filterForm">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite o nome...">
+
+            <label for="projeto">Projeto</label>
+            <select id="projeto" name="projeto">
+                <option value="">Nenhum relatório disponível</option>
+            </select>
+
+            <label for="dataInicio">Data de Início</label>
+            <input type="date" id="dataInicio" name="dataInicio">
+
+            <a href="../telainiF/telainiF.html"><button type="button" onclick="filtrar()">Filtrar</button></a>
+        </form>
+
+
+        <div class="results" id="results">
+            <p>Os resultados aparecerão aqui.</p>
+        </div>
+    </div>
+
+    <script>
+        function filtrar() {
+            const nome = document.getElementById("nome").value;
+            const projeto = document.getElementById("projeto").value;
+            const dataInicio = document.getElementById("dataInicio").value;
+
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = `
+                <h3>Resultados do Filtro:</h3>
+                <p><strong>Nome:</strong> ${nome || "Não informado"}</p>
+                <p><strong>Projeto:</strong> ${projeto || "Nenhum relatório disponível"}</p>
+                <p><strong>Data de Início:</strong> ${dataInicio || "Não informada"}</p>
+            `;
+        }
+
+        function irParaCriarRelatorio() {
+            window.location.href = "adicionar-relatorio.html";
+        }
+    </script>
+</body>
+</html>
